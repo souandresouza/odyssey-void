@@ -12,7 +12,7 @@ Backup portátil (dotfiles) da configuração do desktop Odyssey, sem credenciai
 ## O que NÃO contém
 
 - Firefox/Perfil, histórico, cookies, senhas salvas, sessões e telemetria
-- Token do GitHub CLI (`gh/hosts.yml`), chaves SSH, cookies do PulseAudio, dconf
+- Qualquer configuração do GitHub CLI (`gh/`), chaves SSH, cookies do PulseAudio, dconf
 - Estados de primeira execução, caches, bytecodes e assets binários pessoais
 - Caminhos absolutos do usuário original: são gravados como `__HOME__` e expandidos no install
 

@@ -13,7 +13,7 @@
 **/*.xpi
 **/*.so
 mozilla/
-gh/hosts.yml
+gh/
 pulse/cookie
 dconf/user
 qBittorrent/

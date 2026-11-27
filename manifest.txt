@@ -10,7 +10,6 @@
 .config/fastfetch/odyssey.txt
 .config/fuzzel/fuzzel.ini
 .config/fuzzel/colors-fuzzel.ini
-.config/gh/config.yml
 .config/gtk-3.0/settings.ini
 .config/gtk-4.0/settings.ini
 .config/Hyprland-mimeapps.list
