@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,run";
+    show-icons: true;
+    font: "JetBrains Mono 11";
+    location: 7;   /* bottom-left */
+}
+
+@theme "odyssey"

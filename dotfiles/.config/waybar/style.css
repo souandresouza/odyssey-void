@@ -1,0 +1,153 @@
+/* Odyssey Waybar — variante C: nera, bordo bianco firma */
+
+* {
+    font-family: "JetBrains Mono Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+/* La barra: nera con bordo bianco continuo */
+window#waybar {
+    background-color: #0a0a0a;
+    color: #eaeaea;
+    border: 1.4px solid #eaeaea;
+}
+
+tooltip {
+    background-color: #0a0a0a;
+    border: 1px solid #e8192c;
+    color: #eaeaea;
+}
+
+/* === Menu Odyssey (sinistra) === */
+#image.logo {
+    background-color: #e8192c;
+    padding: 0 0 0 10px;
+    margin: 3px 0 3px 3px;
+}
+
+#custom-menu {
+    background-color: #e8192c;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0 12px 0 6px;
+    margin: 3px 3px 3px 0;
+}
+
+#custom-menu:hover {
+    background-color: #ff2433;
+}
+
+/* === Workspaces + janela (mango) === */
+#workspaces {
+    margin: 0 6px 0 8px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #6a6a6a;
+    padding: 0 10px;
+    margin: 4px 1px;
+    border-radius: 8px;
+    border-bottom: 2px solid transparent;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+#workspaces button:hover {
+    background-color: #1a1a1a;
+    color: #eaeaea;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background-color: #e8192c;
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #ff2433;
+    color: #ffffff;
+}
+
+#workspaces button.empty:not(.active):not(.focused) {
+    color: #4a4a4a;
+}
+
+#window {
+    margin: 4px 6px 4px 2px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background-color: rgba(232, 25, 44, 0.12);
+    color: #eaeaea;
+    font-weight: 500;
+}
+
+/* === Clock (centro) === */
+#clock {
+    color: #eaeaea;
+    font-weight: bold;
+    padding: 0 16px;
+}
+
+/* === Icone tray (moduli image) === */
+#image {
+    padding: 0 8px;
+}
+
+/* === Power === */
+#custom-power {
+    color: #e8192c;
+    font-size: 14px;
+    padding: 0 6px 0 8px;
+    margin-right: 3px;
+}
+
+#custom-power:hover {
+    background-color: #e8192c;
+    color: #ffffff;
+}
+
+/* === Modulos cadrocspace (direita) === */
+#tray,
+#bluetooth,
+#network,
+#wireplumber,
+#backlight,
+#battery,
+#custom-recorder,
+#custom-recordertime {
+    margin: 4px 2px;
+    padding: 0 9px;
+    border-radius: 6px;
+    color: #eaeaea;
+}
+
+#tray:hover,
+#bluetooth:hover,
+#network:hover,
+#wireplumber:hover,
+#backlight:hover,
+#battery:hover,
+#custom-recorder:hover,
+#custom-recordertime:hover {
+    background-color: #1a1a1a;
+}
+
+#custom-recorder {
+    color: #e8192c;
+    font-size: 14px;
+}
+
+#custom-recorder:hover {
+    background-color: #e8192c;
+    color: #ffffff;
+}
+
+#custom-recordertime {
+    background-color: #e8192c;
+    color: #ffffff;
+    font-weight: bold;
+}

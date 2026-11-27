@@ -1,0 +1,80 @@
+/*****----- Tema Odyssey: launcher app -----*****/
+
+configuration {
+    show-icons: true;
+}
+
+/*****----- Global -----*****/
+* {
+    font:             "JetBrains Mono 11";
+    background-color: #0a0a0a;
+    text-color:       #eaeaea;
+}
+
+/*****----- Finestra -----*****/
+window {
+    width: 32%;
+    border: 1px;
+    border-color: #e8192c;
+    padding: 8px;
+    background-color: #0a0a0a;
+}
+
+/*****----- Layout -----*****/
+mainbox {
+    spacing: 6px;
+    children: [ inputbar, listview ];
+}
+
+/*****----- Barra di input -----*****/
+inputbar {
+    padding: 6px 10px;
+    border: 1px;
+    border-color: #3a3a3a;
+    background-color: #1a1a1a;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: #e8192c;
+    padding: 0 8px 0 0;
+}
+
+entry {
+    text-color: #eaeaea;
+    placeholder: "search...";
+    placeholder-color: #6a6a6a;
+}
+
+/*****----- Lista -----*****/
+listview {
+    border: 0;
+    spacing: 2px;
+    scrollbar: false;
+    fixed-height: 0;
+    dynamic: true;
+    lines: 8;
+}
+
+element {
+    padding: 6px 10px;
+    background-color: #0a0a0a;
+    text-color:       #eaeaea;
+}
+
+element selected {
+    background-color: #e8192c;
+    text-color:       #ffffff;
+}
+
+element-icon {
+    size: 20px;
+    background-color: transparent;
+    padding: 0 8px 0 0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}

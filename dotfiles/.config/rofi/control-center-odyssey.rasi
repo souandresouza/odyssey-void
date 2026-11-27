@@ -1,0 +1,80 @@
+/*
+ * Control Center stile Odyssey
+ * Griglia 3x2 centrata, palette nero + rosso
+ */
+
+configuration {
+    show-icons: false;
+    location:   0;   /* 0 = centro */
+}
+
+/*****----- Global -----*****/
+* {
+    font:             "JetBrains Mono 14";
+    background-color: #0a0a0a;
+    text-color:       #eaeaea;
+}
+
+/*****----- Finestra -----*****/
+window {
+    width:            720px;
+    margin:           0px;
+    padding:          12px;
+    border:           1px solid;
+    border-radius:    0px;
+    border-color:     #e8192c;
+    background-color: #0a0a0a;
+}
+
+/*****----- Layout -----*****/
+mainbox {
+    spacing:          10px;
+    children:         [ "listview" ];
+}
+
+/*****----- Griglia 3x2 -----*****/
+listview {
+    enabled:          true;
+    columns:          3;
+    lines:            2;
+    fixed-columns:    true;
+    fixed-height:     true;
+    dynamic:          false;
+    layout:           vertical;
+    scrollbar:        false;
+
+    spacing:          8px;
+    margin:           0px;
+    padding:          8px;
+    background-color: transparent;
+    text-color:       #eaeaea;
+}
+
+/*****----- Tile -----*****/
+element {
+    orientation:      vertical;
+    padding:          24px 18px;
+    border:           1px solid;
+    border-color:     #3a3a3a;
+    border-radius:    0px;
+    background-color: #0a0a0a;
+    text-color:       #eaeaea;
+}
+
+element normal.normal {
+    background-color: #0a0a0a;
+    text-color:       #eaeaea;
+}
+
+element selected.normal {
+    background-color: #e8192c;
+    border-color:     #e8192c;
+    text-color:       #ffffff;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Odyssey Welcome (first run)
+Comment=Show the welcome screen on first login
+Exec=/usr/bin/odyssey-welcome-autostart
+Icon=odyssey-welcome
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+OnlyShowIn=KDE;XFCE;GNOME;Hyprland;niri;Cinnamon;LXQt;MATE;

@@ -1,0 +1,164 @@
+// ~/.config/waybar/config.jsonc — adaptado de cadrocspace/defaults/mango/waybar.jsonc
+// Usa o waybar 0.16 compilado com -Dmango=true em ~/.local/bin/waybar-mango.
+// Estilo: ~/.config/waybar/style.css (tema Odyssey).
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 6,
+    "margin-top": 6,
+    "margin-left": 8,
+    "margin-right": 8,
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "mango/workspaces",
+        "mango/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "bluetooth",
+        "network",
+        "wireplumber",
+        "backlight",
+        "battery",
+        "custom/recorder",
+        "custom/recordertime"
+    ],
+
+    "mango/workspaces": {
+        "all-outputs": false,
+        "active-marker": "",
+        "format": "{name}",
+        "inactive-scroll": false,
+        "name-max-len": 12,
+        "on-click": "workspace-{name}",
+        "on-scroll-down": "workspace-prev",
+        "on-scroll-up": "workspace-next",
+        "show-active": true,
+        "show-empty": true,
+        "show-urgent": true,
+        "show-names": true,
+        "sort-by-index": true,
+        "spacing": 4,
+        "tooltip": false
+    },
+
+    "mango/window": {
+        "format": "{title}",
+        "name-max-len": 60,
+        "on-click": "minimize",
+        "on-click-middle": "close",
+        "on-click-right": "maximize",
+        "tooltip": true,
+        "tooltip-format": "{title}"
+    },
+
+    "clock": {
+        "locale": "pt_BR.UTF-8",
+        "format": " {:L%H:%M, %d %b} ",
+        "format-alt": " {:L%A, %d %B %Y} ",
+        "interval": 60,
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months":   "<span color='#8A928B'><b>{}</b></span>",
+                "days":     "<span color='#caccc9'>{}</span>",
+                "weeks":    "<span color='#8d8e8c'><b>W{}</b></span>",
+                "weekdays": "<span color='#6B6E66'><b>{}</b></span>",
+                "today":    "<span color='#8A928B'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "bluetooth": {
+        "format": "{icon}",
+        "format-icons": {
+            "on": "\uf293",
+            "off": "\uf293",
+            "disabled": "\uf293"
+        },
+        "tooltip-format": "{controller_alias}",
+        "tooltip-format-connected": "{controller_alias}\n{device_enumerate}",
+        "on-click": "blueman-manager"
+    },
+
+    "network": {
+        "format-wifi": "\uf1eb {essid}",
+        "format-ethernet": "\uf0ac {ifname}",
+        "format-linked": "\uf0ac {ifname}",
+        "format-disconnected": "\uf071 off",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Desconectado",
+        "on-click": "nm-connection-editor"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "\uf026 muted",
+        "format-icons": {
+            "default": ["\uf026", "\uf027", "\uf028"]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "tooltip-format": "{node_name}"
+    },
+
+    "backlight": {
+        "format": "\uf185 {percent}%",
+        "min-brightness": 1
+    },
+
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "\uf0e7 {capacity}%",
+        "format-plugged": "\uf0e7 {capacity}%",
+        "format-full": "\uf240 {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "tooltip-format": "{timeTo}\n{power}W"
+    },
+
+    "custom/recorder": {
+        "format": "\uf03d",
+        "on-click": "$HOME/.config/scripts/record.sh --gpu",
+        "tooltip": true,
+        "tooltip-format": "Iniciar/parar gravação (GPU)"
+    },
+
+    "custom/recordertime": {
+        "exec": "if [ -f /tmp/recording_time ]; then cat /tmp/recording_time; fi",
+        "interval": 1,
+        "format": "{text}",
+        "return-type": "plain",
+        "if-file-exists": "/tmp/recording_pid",
+        "hide-empty-text": true,
+        "on-click": "$HOME/.config/scripts/record.sh --gpu",
+        "tooltip": true,
+        "tooltip-format": "Parar gravação"
+    }
+}
