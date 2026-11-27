@@ -48,10 +48,14 @@ if [[ ! -d "$src_root" ]]; then
   printf 'Pasta dotfiles não encontrada: %s\n' "$src_root" >&2
   exit 1
 fi
-if (( ! dry_run )); then
-  mkdir -p "$target"
+if (( dry_run )) && [[ ! -d "$target" ]]; then
+  [[ "$target" == /* ]] || target="$PWD/$target"
+else
+  if (( ! dry_run )); then
+    mkdir -p "$target"
+  fi
+  target="$(cd -- "$target" && pwd -P)"
 fi
-target="$(cd -- "$target" && pwd -P)"
 
 stamp="$(date +%Y%m%d-%H%M%S)"
 backup_root="$target/.odyssey-void-backup/$stamp"
