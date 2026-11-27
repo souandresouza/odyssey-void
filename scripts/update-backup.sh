@@ -35,4 +35,11 @@ while IFS= read -r -d '' file; do
   fi
 done < <(find "$dest_root" -type f -print0)
 
+if command -v xbps-query >/dev/null 2>&1; then
+  xbps-query -m | sed -E 's/-[^-]*_[0-9]+$//' | sort > "$root/packages/manual.txt"
+  printf 'pacotes atualizados: packages/manual.txt\n'
+else
+  printf 'xbps-query não encontrado; packages/manual.txt preservado\n' >&2
+fi
+
 printf '\nBackup atualizado. Rode scripts/check-secrets.sh antes de commitar.\n'

@@ -8,6 +8,7 @@ Backup portátil (dotfiles) da configuração do desktop Odyssey, sem credenciai
 - Desktop: mango, waybar, swaync, rofi, fuzzel, kitty, cava, fastfetch, mako, qt6ct, GTK, XFCE/Thunar, Zed, mpv-related scripts
 - `~/.config/scripts` (scripts e paletas de cores)
 - `~/.config/opencode/opencode.jsonc` (sem token, sem `node_modules`)
+- `packages/manual.txt` (pacotes XBPS marcados como manuais, sem versões — apenas referência)
 
 ## O que NÃO contém
 
@@ -37,7 +38,7 @@ Opções:
 
 Por padrão, antes de sobrescrever qualquer arquivo, o instalador salva a versão anterior em `~/.odyssey-void-backup/<timestamp>/`. Arquivos executáveis mantêm a permissão original.
 
-Dependências dos apps (mango, waybar, kitty, rofi, fuzzel, swaync, cava etc.) não são instaladas automaticamente — o script apenas copia as configurações.
+Dependências dos apps (mango, waybar, kitty, rofi, fuzzel, swaync, cava etc.) não são instaladas automaticamente — o script apenas copia as configurações. `packages/manual.txt` é uma referência para reconstruir o ambiente; inclui itens específicos desta máquina (bootloader, firmware, drivers de GPU) e deve ser revisado antes de usar em outro hardware.
 
 ## Atualizar o backup
 
@@ -48,7 +49,7 @@ Na máquina original:
 ./scripts/check-secrets.sh
 ```
 
-O script de atualização usa `manifest.txt`, substitui o HOME actual por `__HOME__` e nunca copia arquivos fora da lista.
+O script de atualização usa `manifest.txt`, substitui o HOME actual por `__HOME__` e nunca copia arquivos fora da lista. Ele também regenera `packages/manual.txt` com `xbps-query -m` (sem versões); sem `xbps-query`, o arquivo existente é preservado.
 
 ## Segurança
 
