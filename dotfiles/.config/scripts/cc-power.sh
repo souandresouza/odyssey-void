@@ -13,7 +13,7 @@ choice=$(
 
 case "$choice" in
   "Logout")
-    labwc --exit
+    mmsg dispatch quit || loginctl terminate-session "${XDG_SESSION_ID:-}"
     ;;
   "Shutdown")
     sudo poweroff

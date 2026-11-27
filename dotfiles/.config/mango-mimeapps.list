@@ -1,11 +1,11 @@
 [Default Applications]
-image/png=org.xfce.ristretto.desktop
-image/jpeg=org.xfce.ristretto.desktop
-image/gif=org.xfce.ristretto.desktop
-image/webp=org.xfce.ristretto.desktop
-image/bmp=org.xfce.ristretto.desktop
-image/svg+xml=org.xfce.ristretto.desktop
-image/tiff=org.xfce.ristretto.desktop
-image/x-portable-pixmap=org.xfce.ristretto.desktop
-image/heif=org.xfce.ristretto.desktop
-image/avif=org.xfce.ristretto.desktop
+image/png=imv-dir.desktop
+image/jpeg=imv-dir.desktop
+image/gif=imv-dir.desktop
+image/webp=imv-dir.desktop
+image/bmp=imv-dir.desktop
+image/svg+xml=imv-dir.desktop
+image/tiff=imv-dir.desktop
+image/x-portable-pixmap=imv-dir.desktop
+image/heif=imv-dir.desktop
+image/avif=imv-dir.desktop

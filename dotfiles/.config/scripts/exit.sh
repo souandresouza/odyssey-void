@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Menu de saída/bloqueio. Funciona em mangowm (e em Sway, como fallback).
+# Menu de saída/bloqueio no mangowm.
 
 set -euo pipefail
 
@@ -29,8 +29,6 @@ if [[ -n ${sel_option:-} ]]; then
                 # Encerra o compositor atual de forma limpa.
                 if command -v mmsg >/dev/null 2>&1 && pgrep -x mango >/dev/null 2>&1; then
                     mmsg dispatch quit
-                elif [[ -n ${SWAYSOCK:-} ]]; then
-                    swaymsg exit
                 else
                     loginctl terminate-session "${XDG_SESSION_ID:-}"
                 fi

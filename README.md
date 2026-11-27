@@ -37,7 +37,7 @@ Opções:
 
 Por padrão, antes de sobrescrever qualquer arquivo, o instalador salva a versão anterior em `~/.odyssey-void-backup/<timestamp>/`. Arquivos executáveis mantêm a permissão original.
 
-Dependências dos apps (Hyprland/mango, waybar, kitty, rofi, fuzzel, swaync, cava etc.) não são instaladas automaticamente — o script apenas copia as configurações.
+Dependências dos apps (mango, waybar, kitty, rofi, fuzzel, swaync, cava etc.) não são instaladas automaticamente — o script apenas copia as configurações.
 
 ## Atualizar o backup
 

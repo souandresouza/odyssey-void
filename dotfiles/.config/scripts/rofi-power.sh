@@ -4,7 +4,7 @@ CHOICE=$(printf "Logout\nReboot\nSuspend\nShutdown" | \
     rofi -dmenu -p "power" -theme ~/.config/rofi/power-odyssey.rasi)
 
 case "$CHOICE" in
-    Logout)   labwc --exit ;;
+    Logout)   mmsg dispatch quit || loginctl terminate-session "${XDG_SESSION_ID:-}" ;;
     Reboot)   loginctl reboot ;;
     Suspend)  loginctl suspend ;;
     Shutdown) loginctl poweroff ;;

@@ -12,7 +12,6 @@
 .config/fuzzel/colors-fuzzel.ini
 .config/gtk-3.0/settings.ini
 .config/gtk-4.0/settings.ini
-.config/Hyprland-mimeapps.list
 .config/kdeglobals
 .config/kitty/kitty.conf
 .config/kitty/odyssey-ui.conf
@@ -22,7 +21,6 @@
 .config/kitty/odyssey-reset.sh
 .config/kitty/odyssey_terminal.py
 .config/kitty/tab_bar.py
-.config/labwc-mimeapps.list
 .config/mako/config
 .config/mango/bind.conf
 .config/mango/config.conf
@@ -33,7 +31,6 @@
 .config/mango/theme.conf
 .config/mango-mimeapps.list
 .config/mimeapps.list
-.config/niri-mimeapps.list
 .config/opencode/opencode.jsonc
 .config/opencode/.gitignore
 .config/pavucontrol.ini

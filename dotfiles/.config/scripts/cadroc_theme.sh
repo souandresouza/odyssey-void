@@ -26,8 +26,6 @@ STATE_DIR="${THEME_ROOT}/state"
 THEME_STATE_FILE="${STATE_DIR}/state.env"
 
 THEME_BTOP_DIR="${HOME}/.config/btop/themes"
-# Referências ao labwc removidas (o compositor agora é o MangoWM).
-# Antes: THEME_LABWC_OVERRIDE=~/.themes/cadroclab/labwc/themerc
 
 # Default theme values.
 # A fonte e a mesma que o resto dos configs usa (waybar, swaync, fuzzel) e o

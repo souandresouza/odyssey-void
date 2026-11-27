@@ -7,4 +7,3 @@ Icon=odyssey-welcome
 Terminal=false
 NoDisplay=true
 X-GNOME-Autostart-enabled=true
-OnlyShowIn=KDE;XFCE;GNOME;Hyprland;niri;Cinnamon;LXQt;MATE;
